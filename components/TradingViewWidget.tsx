@@ -1,3 +1,5 @@
+'use client'
+
 // TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from 'react';
 
@@ -75,7 +77,6 @@ function TradingViewWidget() {
 
     return (
         <div className="tradingview-widget-container" ref={container}>
-            <div className="tradingview-widget-container__widget"></div>
             <div className="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener nofollow" target="_blank"><span className="blue-text">Apple</span></a><span className="comma">,</span>&nbsp;<a href="https://www.tradingview.com/symbols/NASDAQ-GOOGL/" rel="noopener nofollow" target="_blank"><span className="blue-text">Google</span></a><span className="comma">,</span><span className="and">&nbsp;and&nbsp;</span><a href="https://www.tradingview.com/symbols/NASDAQ-MSFT/" rel="noopener nofollow" target="_blank"><span className="blue-text">Microsoft stock price</span></a><span className="trademark">&nbsp;by TradingView</span></div>
         </div>
     );
