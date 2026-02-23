@@ -2,10 +2,18 @@
 
 import {auth} from '@/lib/better-auth/auth'
 import {headers} from "next/headers";
+import {inngest} from "@/lib/inngest/client";
 
 export const SignUp = async({email,password,fullName}:SignUpFormData)=>{
 try{
     const response = await auth.api.signUpEmail({body:{email,password, name:fullName}})
+
+    if(response){
+        inngest.send({
+            name:'app/user.created',
+            data:{email,name:fullName}
+        })
+    }
     return {success:true,data:response}
 }
 catch(err){
