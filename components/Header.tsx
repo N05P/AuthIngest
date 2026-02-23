@@ -1,5 +1,3 @@
-
-
 import Link from "next/link";
 import {auth} from "@/lib/better-auth/auth";
 import LogoutButton from "@/components/LogoutButton";
